@@ -4,23 +4,25 @@
 #include <string>
 using namespace std;
 
-/* Type your code here */
-class ItemToPurchase{
-  private:
-  string itemName;
-  int itemPrice;
-  int itemQuantity;
+class ItemToPurchase {
+public:
+    // Default constructor
+    ItemToPurchase();
 
-  public:
-  ItemToPurchase();
-  void SetName(string name);
-  void SetPrice(int price);
-  void SetQuantity(int qty);
+    // Mutators
+    void SetName(string name);
+    void SetPrice(int price);
+    void SetQuantity(int quantity);
 
-  string GetName();
-  int SetPrice();
-  int SetQuantity();
+    // Accessors
+    string GetName() const;
+    int GetPrice() const;
+    int GetQuantity() const;
 
-  void Print();
-}
-#endif
+private:
+    string itemName;
+    int itemPrice;
+    int itemQuantity;
+};
+
+#endif // ITEM_TO_PURCHASE_H
